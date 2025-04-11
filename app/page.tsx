@@ -3,7 +3,7 @@ import { MdCollections, MdLocalOffer, MdStyle } from "react-icons/md";
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 
 // Reusable Feature Card
-function FeatureCard({ icon, title, description }) {
+ function FeatureCard({ icon }: { icon: string }, title: string, description: string) {
   return (
     <div className="flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-gray-200 hover:scale-105 transition-transform duration-300">
       <div className="bg-green-300 p-4 rounded-full shadow-md">
