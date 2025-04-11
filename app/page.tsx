@@ -1,32 +1,19 @@
 import Image from "next/image";
-import {
-  GlobeAltIcon,
-  AcademicCapIcon,
-  SparklesIcon,
-} from "@heroicons/react/24/solid";
+import { MdCollections, MdLocalOffer, MdStyle } from "react-icons/md"; 
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 
 // Reusable Feature Card
-function FeatureCard({
-  icon,
-  title,
-  description,
-}: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
+function FeatureCard({ icon, title, description }) {
   return (
     <div className="flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-gray-200 hover:scale-105 transition-transform duration-300">
       <div className="bg-green-300 p-4 rounded-full shadow-md">
-        <div className="text-green-800 h-9 w-10">{icon}</div>
+        <div className="h-9 w-10">{icon}</div>
       </div>
       <h3 className="mt-4 text-xl font-bold text-gray-800">{title}</h3>
       <p className="mt-2 text-center text-gray-700">{description}</p>
     </div>
   );
 }
-
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-green-700 via-emerald-600 to-teal-500 overflow-hidden text-white">
@@ -76,31 +63,31 @@ export default function Home() {
 
         {/* Features */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl w-full">
-          <FeatureCard
-            icon={<GlobeAltIcon className="h-10 w-10 text-white" />}
-            title="Trending Collections"
-            description="Daily updates on the latest fashion trends and seasonal must-haves"
-          />
-          <FeatureCard
-            icon={<AcademicCapIcon className="h-10 w-10 text-white" />}
-            title="Exclusive Offers"
-            description="Members-only discounts and flash sales on premium fashion items"
-          />
-          <FeatureCard
-            icon={<SparklesIcon className="h-10 w-10 text-white" />}
-            title="Style Guidance"
-            description="Expert tips on accessorizing, mix-and-match, and wardrobe building"
-          />
+        <FeatureCard
+          icon={<MdCollections className="h-10 w-10 text-white" />}
+          title="Trending Collections"
+          description="Daily updates on the latest fashion trends and seasonal must-haves"
+        />
+        <FeatureCard
+          icon={<MdLocalOffer className="h-10 w-10 text-white" />}
+          title="Exclusive Offers"
+          description="Members-only discounts and flash sales on premium fashion items"
+        />
+        <FeatureCard
+          icon={<MdStyle className="h-10 w-10 text-white" />}
+          title="Style Guidance"
+          description="Expert tips on accessorizing, mix-and-match, and wardrobe building"
+        />
         </div>
       </div>
 
       {/* Footer */}
       <footer className="relative z-10 py-8 text-center text-sm text-white/70">
         <div className="space-x-6">
-          <a href="/privacy" className="hover:underline">
+          <a href="#" className="hover:underline">
             Privacy Policy
           </a>
-          <a href="/terms" className="hover:underline">
+          <a href="#" className="hover:underline">
             Terms of Service
           </a>
         </div>
