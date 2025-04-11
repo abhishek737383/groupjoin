@@ -3,12 +3,12 @@ import { MdCollections, MdLocalOffer, MdStyle } from "react-icons/md";
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
 import React from "react";
 
-// Feature card remains unchanged
 interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
+
 function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-gray-200 hover:scale-105 transition-transform duration-300">
@@ -24,7 +24,6 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-green-700 via-emerald-600 to-teal-500 overflow-hidden text-white">
-      {/* Semi-transparent BG image */}
       <Image
         src="/bg.jpg"
         alt="Fashion background"
@@ -34,10 +33,10 @@ export default function Home() {
         unoptimized
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-24 text-center">
-        {/* Logo */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-15 text-center">
+        {/* Logo with mobile margin adjustment */}
         <div
-          className="mb-6 opacity-0 animate-slide-down"
+          className="mb-[20px] sm:mb-1 opacity-0 animate-slide-down"
           style={{ animationDelay: "0.3s" }}
         >
           <Image
@@ -51,7 +50,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Headline */}
         <h1
           className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg opacity-0 animate-slide-down"
           style={{ animationDelay: "0.6s" }}
@@ -59,7 +57,6 @@ export default function Home() {
           Get <span className="text-yellow-300">Fashion Trend</span> Updates on WhatsApp
         </h1>
 
-        {/* Subheading */}
         <p
           className="mt-6 max-w-2xl text-lg sm:text-xl text-white/80 opacity-0 animate-slide-down"
           style={{ animationDelay: "0.9s" }}
@@ -68,7 +65,6 @@ export default function Home() {
           limited offers, and expert fashion tips directly on WhatsApp!
         </p>
 
-        {/* Call to Action */}
         <a
           href="https://chat.whatsapp.com/GXzqDtFkjyG11O4CfGOZ3j"
           target="_self"
@@ -80,7 +76,6 @@ export default function Home() {
           <span className="text-lg text-black-800">Join Now</span>
         </a>
 
-        {/* Features */}
         <div
           className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl w-full opacity-0 animate-slide-up"
           style={{ animationDelay: "1.5s" }}
@@ -103,7 +98,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="relative z-10 py-8 text-center text-sm text-white/70 opacity-0 animate-slide-up" style={{ animationDelay: "1.8s" }}>
         <div className="space-x-6">
           <a href="#" className="hover:underline">Privacy Policy</a>

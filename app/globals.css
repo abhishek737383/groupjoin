@@ -1,28 +1,42 @@
 @import "tailwindcss";
 
 @keyframes slideDownFade {
-  0%   { transform: translateY(-100px); opacity: 0; }
-  100% { transform: translateY(0);     opacity: 1; }
+  0%   { transform: translateY(-30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
+
 @keyframes slideUpFade {
-  0%   { transform: translateY(100px); opacity: 0; }
-  100% { transform: translateY(0);     opacity: 1; }
+  0%   { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
+
 @keyframes gradientShift {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-.animate-slide-down { animation: slideDownFade 0.8s ease-out forwards; }
-.animate-slide-up   { animation: slideUpFade   0.8s ease-out forwards; }
-.animate-gradient   { animation: gradientShift 3s ease infinite; background-size: 200% 200%; }
+
+.animate-slide-down {
+  animation: slideDownFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-gradient {
+  animation: gradientShift 4s ease-in-out infinite;
+  background-size: 200% 200%;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -40,6 +54,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  
+  margin: 0;
+  padding: 0;
+  will-change: background, color;
 }
-
