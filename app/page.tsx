@@ -1,9 +1,17 @@
 import Image from "next/image";
 import { MdCollections, MdLocalOffer, MdStyle } from "react-icons/md"; 
 import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
+import React from "react";
 
-// Reusable Feature Card
- function FeatureCard({ icon }: { icon: string }, title: string, description: string) {
+// Define the props interface for the FeatureCard component
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+// Reusable Feature Card component
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-gray-200 hover:scale-105 transition-transform duration-300">
       <div className="bg-green-300 p-4 rounded-full shadow-md">
@@ -14,6 +22,7 @@ import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/outline";
     </div>
   );
 }
+
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-green-700 via-emerald-600 to-teal-500 overflow-hidden text-white">
@@ -63,21 +72,21 @@ export default function Home() {
 
         {/* Features */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl w-full">
-        <FeatureCard
-          icon={<MdCollections className="h-10 w-10 text-white" />}
-          title="Trending Collections"
-          description="Daily updates on the latest fashion trends and seasonal must-haves"
-        />
-        <FeatureCard
-          icon={<MdLocalOffer className="h-10 w-10 text-white" />}
-          title="Exclusive Offers"
-          description="Members-only discounts and flash sales on premium fashion items"
-        />
-        <FeatureCard
-          icon={<MdStyle className="h-10 w-10 text-white" />}
-          title="Style Guidance"
-          description="Expert tips on accessorizing, mix-and-match, and wardrobe building"
-        />
+          <FeatureCard
+            icon={<MdCollections className="h-10 w-10 text-white" />}
+            title="Trending Collections"
+            description="Daily updates on the latest fashion trends and seasonal must-haves"
+          />
+          <FeatureCard
+            icon={<MdLocalOffer className="h-10 w-10 text-white" />}
+            title="Exclusive Offers"
+            description="Members-only discounts and flash sales on premium fashion items"
+          />
+          <FeatureCard
+            icon={<MdStyle className="h-10 w-10 text-white" />}
+            title="Style Guidance"
+            description="Expert tips on accessorizing, mix-and-match, and wardrobe building"
+          />
         </div>
       </div>
 
