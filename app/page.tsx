@@ -73,11 +73,11 @@ export default function Home() {
           href="https://chat.whatsapp.com/GXzqDtFkjyG11O4CfGOZ3j"
           target="_self"
           rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center gap-3 px-8 py-4 font-semibold rounded-full shadow-xl transform opacity-0 animate-slide-up animate-gradient bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:scale-105 transition-transform duration-300"
+          className="mt-10 inline-flex items-center gap-3 px-8 py-4 font-semibold rounded-full shadow-xl transform opacity-90 animate-slide-up animate-gradient bg-gradient-to-r from-red-400 via-red-500 to-blue-600 hover:scale-105 transition-transform duration-300"
           style={{ animationDelay: "1.2s" }}
         >
-          <ChatBubbleBottomCenterTextIcon className="h-6 w-6 text-green-800" />
-          <span className="text-lg text-green-800">Join Now</span>
+          <ChatBubbleBottomCenterTextIcon className="h-6 w-6 text-black-800" />
+          <span className="text-lg text-black-800">Join Now</span>
         </a>
 
         {/* Features */}
