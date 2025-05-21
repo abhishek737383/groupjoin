@@ -54,7 +54,7 @@ export default function Home() {
           className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg opacity-0 animate-slide-down"
           style={{ animationDelay: "0.6s" }}
         >
-          Get <span className="text-yellow-300">Fashion Trend</span> Updates on WhatsApp
+          Get <span className="text-yellow-300">Free Fashion Trend</span> Updates on WhatsApp
         </h1>
 
         <p
@@ -62,7 +62,7 @@ export default function Home() {
           style={{ animationDelay: "0.9s" }}
         >
           Join our style community for daily outfit inspirations, exclusive collection alerts,
-          limited offers, and expert fashion tips directly on WhatsApp!
+          limited offers, and expert fashion Free tips directly on WhatsApp!
         </p>
 
         <a
@@ -83,7 +83,7 @@ export default function Home() {
           <FeatureCard
             icon={<MdCollections className="h-10 w-10 text-white" />}
             title="Trending Collections"
-            description="Daily updates on the latest fashion trends and seasonal must-haves"
+            description="Daily Free updates on the latest fashion trends and seasonal must-haves"
           />
           <FeatureCard
             icon={<MdLocalOffer className="h-10 w-10 text-white" />}
@@ -93,7 +93,7 @@ export default function Home() {
           <FeatureCard
             icon={<MdStyle className="h-10 w-10 text-white" />}
             title="Style Guidance"
-            description="Expert tips on accessorizing, mix-and-match, and wardrobe building"
+            description="Expert Free tips on accessorizing, mix-and-match, and wardrobe building"
           />
         </div>
       </div>
